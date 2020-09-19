@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.AdministratorDao">
+    <insert id="save">
+   insert into Administrator(name,password,email,phoneNum,createTime) values(#{name},#{password},#{email},#{phoneNum},#{createTime})
+  </insert>
+    <select id="findAdministrator" resultType="administrator">
+    select *from Administrator where binary name like #{name} or binary email like #{name} or binary phoneNum like #{name} and binary password like #{password}
+    </select>
+    <select id="findAdministratorByEmail" resultType="administrator">
+    select *from Administrator where binary email like #{email}
+    </select>
+</mapper>

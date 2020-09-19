@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.ProductDao">
+    <select id="findAll" resultType="product">
+    select * from product
+  </select>
+    <select id="findPruductByPage" resultType="product">
+         select* from product where productNum like concat('%',#{searchContent},'%') ||  productName like concat('%',#{searchContent},'%') || cityName like concat('%',#{searchContent},'%') || departureTime like concat('%',#{searchContent},'%') || productPrice like concat('%',#{searchContent},'%') || productDes like concat('%',#{searchContent},'%') || productStatus like concat('%',#{searchContent},'%')
+    </select>
+    <delete id="deleteProductById">
+        delete  from product where id=#{id};
+    </delete>
+</mapper>
