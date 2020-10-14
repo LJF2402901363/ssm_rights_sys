@@ -1,7 +1,7 @@
 package entity;
 
 import java.io.Serializable;
-
+import java.util.List;
 /**
  * Classname:User
  *
@@ -23,6 +23,8 @@ public class User implements Serializable {
     private String phoneNum;
     //用户状态
     private int status;
+    //角色列表
+    private List<Role> roleList;
     /**
      * 关闭状态
      */
@@ -89,6 +91,15 @@ public class User implements Serializable {
                 ", password='" + password + '\'' +
                 ", phoneNum='" + phoneNum + '\'' +
                 ", status=" + status +
+                ", roleList=" + roleList +
                 '}';
+    }
+
+    public List<Role> getRoleList() {
+        return roleList;
+    }
+
+    public void setRoleList(List<Role> roleList) {
+        this.roleList = roleList;
     }
 }

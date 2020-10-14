@@ -1,5 +1,5 @@
 package entity;
-
+import java.util.List;
 import java.io.Serializable;
 
 /**
@@ -17,6 +17,8 @@ public class Role implements Serializable {
     private String roleName;
     //角色描述
     private String roleDes;
+    //角色列表
+    private List<User> userList;
 
     public int getId() {
         return id;
@@ -42,12 +44,21 @@ public class Role implements Serializable {
         this.roleDes = roleDes;
     }
 
+    public List<User> getUserList() {
+        return userList;
+    }
+
+    public void setUserList(List<User> userList) {
+        this.userList = userList;
+    }
+
     @Override
     public String toString() {
         return "Role{" +
                 "id=" + id +
                 ", roleName='" + roleName + '\'' +
                 ", roleDes='" + roleDes + '\'' +
+                ", roleList=" + userList +
                 '}';
     }
 }
