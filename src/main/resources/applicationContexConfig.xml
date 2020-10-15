@@ -15,9 +15,6 @@
         http://www.springframework.org/schema/aop/spring-aop.xsd">
     <!--    引入druid.properties的配置文件-->
     <context:property-placeholder location="classpath:*.properties" ></context:property-placeholder>
-<!--    <context:property-placeholder location="druid.properties"></context:property-placeholder>-->
-<!--    <context:property-placeholder location="email.properties"></context:property-placeholder>-->
-<!--    <context:property-placeholder location="log4j.properties"></context:property-placeholder>-->
     <!--    配置druid数据源-->
     <bean class="com.alibaba.druid.pool.DruidDataSource" id="dataSource">
         <property name="password" value="${jdbc.password}"></property>

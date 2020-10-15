@@ -17,7 +17,7 @@
     </insert>
 <!--    更新用户-->
     <update id="updateUser">
-        update user set email=#{email},userName=#{userName},password=#{},phoneNum=#{phoneNum},status=#{status} where id =#{id}
+        update user set email=#{email},userName=#{userName},password=#{password},phoneNum=#{phoneNum},status=#{status} where id =#{id}
     </update>
 <!--    删除用户-->
     <delete id="deleteUserById">

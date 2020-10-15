@@ -1,24 +1,17 @@
 package controller;
 
-import com.fasterxml.jackson.core.JsonFactory;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import entity.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
 import service.ProductService;
-
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Classname:ProductController
@@ -63,14 +56,8 @@ public class ProductController {
         if (flag == true) {
             jsonData = "{\"status\":1}";
         } else {
-            jsonData = "{\"status\":1}";
+            jsonData = "{\"status\":0}";
         }
-//        ObjectMapper objectMapper = new ObjectMapper();
-//        try {
-//            jsonData = objectMapper.writeValueAsString(jsonData);
-//        } catch (JsonProcessingException e) {
-//            e.printStackTrace();
-//        }
         return jsonData;
     }
 }

@@ -48,5 +48,11 @@ public interface UserDao {
      * @return int
      **/
     public int deleteUserById(int id);
-    public List<User> findUserByPage();
+    /**
+     * @Description :通过搜索文本分页查询
+     * @Date 22:25 2020/10/15 0015
+     * @Param * @param searchContext ：
+     * @return java.util.List<entity.User>
+     **/
+    public List<User> findUserByPage(String searchContent);
 }

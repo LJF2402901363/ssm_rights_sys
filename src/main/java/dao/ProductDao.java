@@ -33,7 +33,6 @@ public interface ProductDao {
      * @Param * @param searchContext ：
      **/
     public List<Product> findPruductByPage(String searchContext);
-
     /**
      * @return int
      * @Description :通过ID删除对应的商品
