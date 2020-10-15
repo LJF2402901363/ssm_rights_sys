@@ -10,8 +10,8 @@
         http://www.springframework.org/schema/context/spring-context.xsd
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+<!--    开启注解-->
     <mvc:annotation-driven enable-matrix-variables="true"/>
-    <context:property-placeholder location="classpath:email.properties"></context:property-placeholder>
     <!--    扫描controller包-->
     <context:component-scan base-package="controller"></context:component-scan>
     <!--    放行静态资源-->
